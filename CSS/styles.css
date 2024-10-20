@@ -1,0 +1,214 @@
+/* styles.css - Estilos para la estructura semántica */
+
+body {
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    background-color: #eedae1;
+    overflow-x: hidden;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    background-image: url("../image/rb_55288.png");
+}
+
+header {
+    background-color: #704a4a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    color: rgb(0, 0, 0);
+    padding: 35px;
+    text-align: center;
+    margin-right: -70%;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Conviertes el contenedor en flexbox */
+    align-items: center; /* Alinea verticalmente el contenido */
+    justify-content: space-between; /* Espacio entre el primer li y los demás */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+nav .tamanio {
+    font-size: 25px;
+}
+
+nav ul li.logo {
+    font-size: 25px;
+    margin-right: 1300px;
+    margin-left: -1300px; /* Empuja el primer li (logo) a la izquierda */
+}
+
+nav ul li:not(.logo) {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li.logoservicios {
+    margin-right: 1350px;
+    margin-left: -1350px; /* Empuja el primer li (logo) a la izquierda */
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+main {
+    padding: 40px;
+    background-color: #333;
+    margin: 0px auto;
+    width: 100%;
+}
+
+aside {
+    background-color: #000000;
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 300px;
+}
+
+footer {
+    background-color: #4a4848;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+#inicio h2{
+    font-size: 24px;
+    text-align: center;
+  }
+
+  #inicio p{
+    font-size: 16px;
+    text-align: center;
+  }
+  
+#slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 500px;
+    overflow:hidden;
+    background-color: black;
+}
+/*Valores de las imagenes*/
+#slider img{
+    margin: 0 auto;
+    -moz-transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    opacity: 0;
+}
+/*Para que la primera imagen este activa al inicio*/
+#slider img:nth-child(1){
+    opacity: 1;
+}
+
+table{
+    margin: 0 auto;
+    width: 800px;
+    height: auto;
+    overflow:hidden;
+    background-color: white;
+    border: 0;
+}
+
+#izquierda{
+    text-align: right;
+}
+#derecha{
+    text-align: left;
+}
+
+/*Imagenes cuadradas de servicios*/
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding-top: 80px;
+  }
+
+  .service p{
+    width: 60%;
+    margin-left: 125px;
+    display: flex;
+    text-align: center;
+  }
+  
+  .service {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 1.2s;
+  }
+  
+  .service img {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  
+  .service:hover {
+    transform: scale(1.1);
+  }
+  
+  .description {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+  }
+
+  .arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 100px; /* Puedes ajustar el ancho según tu necesidad */
+    margin: 0 auto; /* Centra las flechas horizontalmente */
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+button img {
+    width: 40px; /* Ajusta el tamaño de las flechas */
+    height: 40px; /* Ajusta el tamaño de las flechas */
+}
+
+button:focus {
+    outline: none; /* Elimina el contorno al hacer clic */
+}
+
+button:hover img {
+    filter: brightness(1.2); /* Aumenta el brillo de la imagen al pasar el cursor */
+}
+
+/*nav .menu{
+    border-style: groove;
+}*/
+  
