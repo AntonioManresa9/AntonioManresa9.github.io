@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+a {
+    text-decoration: none;
+    color: inherit; /* Para heredar el color del padre */
+}
+
+header {
+    width: 100%;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+header a {
+    color: #eee;
+    margin-right: 40px;
+}
+
+
+/* carousel */
+.carousel {
+    height: 100vh; /* Altura completa de la ventana */
+    width: 100vw; /* Ancho completo de la ventana */
+    position: fixed; /* Mantenerlo fijo en la parte superior */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1; /* Z-index menor para que esté detrás de la barra de menú */
+}
+
+.carousel .list .item {
+    width: 100vw; /* Ancho completo */
+    height: 100vh; /* Altura completa */
+    position: absolute;
+    inset: 0; /* Ocupa todo el contenedor */
+}
+
+.carousel .list .item img {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+/* Barra de menú */
+.navbar {
+    position: fixed; /* Fija en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Asegúrate de que esté por encima */
+    background-color: #00000054; /* Sin fondo */
+    padding: 10px 20px; /* Espacio interno */
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Estilos para los enlaces en la barra de menú */
+.center-links a {
+    color: white; /* Color del texto */
+    margin-right: 40px; /* Margen a la derecha */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .center-links a {
+        margin-right: 20px; /* Menor margen en móviles */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel .list .item .content {
+        padding: 5px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .carousel .list .item .title {
+        font-size: 2.5em; /* Ajusta el tamaño de la fuente en móviles */
+    }
+
+    .carousel .list .item .topic {
+        font-size: 2em; /* Ajusta el tamaño de la fuente en móviles */
+    }
+}
+
+.carousel .list .item .content {
+    position: absolute;
+    top: 20%;
+    width: 90%; /* Ajuste para responsividad */
+    left: 48%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    max-width: 900px;    /* No se expandirá más allá de 600px */
+    margin-left: 0;      /* Alineado a la izquierda */
+    padding: 10px;       /* Espacio interno alrededor del texto */
+}
+
+.carousel .list .item .author {
+    font-weight: bold;
+    letter-spacing: 2px; /* Reducir el espaciado en móviles */
+}
+
+.carousel .list .item .title,
+.carousel .list .item .topic {
+    font-size: 4.5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+.carousel .list .item .topic {
+    color: #f1683a;
+}
+
+.carousel .list .item .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.carousel .list .item .buttons button {
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+.carousel .list .item .buttons button:nth-child(2) {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+
+/* thumbnail */
+.thumbnail {
+    position: absolute;
+    bottom: 20px;
+    left: 48%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    gap: 70px;
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.thumbnail .item:hover img {
+    transform: scale(1.05);
+}
+
+.thumbnail .item .content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: #fff;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+.thumbnail .item .content .title {
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.thumbnail .item .content .description {
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+/* arrows */
+.arrows {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 90px 50px; /* Espaciado en los lados */
+    z-index: 100;
+}
+
+.arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(238, 238, 238, 0.4);
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.arrows button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+/* animation */
+.carousel .list .item:nth-child(1) {
+    z-index: 1;
+}
+
+/* ... (resto de tu CSS sin cambios) ... */
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+    .carousel .list .item .content {
+        
+        top: 21%;
+       
+    }
+
+    .thumbnail .item {
+        width: 120px;
+        height: 180px;
+    }
+
+    .arrows button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .thumbnail .item .content .title {
+        font-size: 0.9em;
+    }
+
+    .thumbnail .item .content .description {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .thumbnail .item {
+        width: 100px;
+        height: auto;
+    }
+
+    .arrows {
+        flex-direction: column;
+        width: auto;
+        gap: 5px;
+    }
+
+    .thumbnail .item .content .title {
+        font-size: 0.8em;
+    }
+
+    .thumbnail .item .content .description {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header a {
+        margin-right: 20px; /* Ajustar el margen en móviles */
+    }
+
+    .carousel .list .item .content {
+        padding-right: 10px; /* Reducir padding en móviles */
+    }
+
+    .carousel .list .item .content .title {
+        font-size: 3em; /* Ajustar tamaño de fuente en móviles */
+    }
+
+    .carousel .list .item .topic {
+        font-size: 2.5em; /* Ajustar tamaño de fuente en móviles */
+    }
+
+    .thumbnail {
+        display: grid; /* Cambia a diseño de cuadrícula */
+        grid-template-columns: repeat(2, 1fr); /* Dos elementos por fila */
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .thumbnail .item {
+        width: 120px;
+        height: auto;
+    }
+
+    .arrows {
+        bottom: 10px;
+        padding: 0 15px;
+    }
+
+    .arrows button {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel .list .item .content .title {
+        font-size: 2em; /* Ajustar aún más para pantallas pequeñas */
+    }
+
+    .carousel .list .item .content .topic {
+        font-size: 1.8em; /* Ajustar aún más para pantallas pequeñas */
+    }
+
+    .thumbnail {
+        grid-template-columns: repeat(2, 1fr); /* Asegura dos columnas en pantallas más pequeñas */
+        gap: 5px;
+    }
+
+    .thumbnail .item {
+        width: 100px;
+    }
+
+    .arrows {
+        bottom: 65px;
+        gap: 5px;
+    }
+
+    .arrows button {
+        width: 30px;
+        height: 30px;
+    }
+}

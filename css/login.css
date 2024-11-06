@@ -1,0 +1,535 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+.container {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+  background-image: url("../image/masajeespalda.png");
+  background-size: cover; /* O usa 'contain' si prefieres que se ajuste sin recortes */
+  background-position: center; /* Esto centra la imagen en el contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  display: flex;
+  align-items: center;
+}
+
+/* para visualizar icono ojo contraseña*/
+
+.input-field {
+  position: relative;
+}
+
+#togglePassword {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px; /* Ajusta el tamaño según sea necesario */
+}
+
+#togglePassword1 {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px; /* Ajusta el tamaño según sea necesario */
+}
+
+#togglePassword2 {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px; /* Ajusta el tamaño según sea necesario */
+}
+
+
+.pass {
+  font-size: 1.5rem;
+  width: 400px;
+  padding: 10px 5px;
+}
+
+.bx {
+  font-size: 30px;
+  transform: translate(300px);
+  margin-top: -55px;
+  cursor: pointer;
+}
+
+.forms-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.button-inicio {
+  background-color: #f8c8e6; /* Color de fondo claro */
+  color: #383838; /* Color del texto oscuro */
+  padding: 15px 30px; /* Espaciado interno */
+  text-align: center; /* Centrar texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Para que se comporte como un bloque */
+  font-size: 18px; /* Tamaño de fuente */
+  margin: 10px; /* Espaciado externo */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  border: 2px solid #ffcbf8; /* Borde de color oscuro */
+  border-radius: 25px; /* Bordes más redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+.button-inicio:hover {
+  background-color: #fad1ff; /* Color más oscuro al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de levantamiento al pasar el mouse */
+}
+
+
+.signin-signup {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 75%;
+  width: 50%;
+  transition: 1s 0.7s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  padding-right: 30px;
+}
+
+form.sign-up-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+form.sign-in-form {
+  z-index: 2;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #f6f6f6;
+  margin-bottom: 10px;
+}
+
+/* Estilo para la estructura de los campos de entrada */
+.input-field {
+  position: relative;
+  max-width: 380px;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.input-field label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: #a6a2a2;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Evitar que el label se mueva para el input de tipo date */
+.input-field input[type="date"]:focus + label,
+.input-field input[type="date"]:not(:placeholder-shown) + label {
+  top: 50%; /* Ajusta la posición si es necesario */
+  font-size: 1.1rem;
+  color: #a6a2a2;
+}
+
+.container {
+  overflow: visible; /* O ajusta según sea necesario */
+}
+
+
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #4d4c4c;
+  font-size: 1.1rem;
+}
+
+/* Estilo para el input */
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* El label flotante */
+.input-field label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: #a6a2a2;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Cuando el input tiene foco o contiene texto, el label se mueve arriba */
+.input-field input:focus + label,
+.input-field input:not(:placeholder-shown) + label {
+  top: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Ocultar el placeholder original */
+.input-field input::placeholder {
+  color: transparent;
+}
+
+/* Otros estilos */
+.input-field i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.social-text {
+  padding: 0.7rem 0;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.45rem;
+  color: #f5f5f5;
+  border-radius: 50%;
+  border: 1px solid #fffdfe;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  color: #4481eb;
+  border-color: #4481eb;
+}
+
+.btn {
+  width: 150px;
+  background-color: #f7f7f9;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: hsl(0, 12%, 5%);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #efd1f0;
+}
+.panels-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -10%;
+  right: 48%;
+  transform: translateY(-50%);
+  background-image: url("../image/FondoRosa.jpg");
+  
+  transition: 1.8s ease-in-out;
+  border-radius: 50%;
+  z-index: 6;
+}
+
+.image {
+  width: 100%;
+  transition: transform 1.1s ease-in-out;
+  transition-delay: 0.4s;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  text-align: center;
+  z-index: 6;
+}
+
+.left-panel {
+  pointer-events: all;
+  padding: 3rem 17% 2rem 12%;
+}
+
+.right-panel {
+  pointer-events: none;
+  padding: 3rem 12% 2rem 17%;
+}
+
+.panel .content {
+  color: #2c2c2c; /* Color de texto más suave */
+  transition: transform 0.9s ease-in-out;
+  transition-delay: 0.6s;
+  padding: 50px; /* Espaciado interno */
+}
+
+.panel h3 {
+  font-weight: 700; /* Encabezado más destacado */
+  line-height: 1.2; /* Mayor espaciado entre líneas */
+  font-size: 1.75rem; /* Tamaño de fuente mayor */
+  margin-bottom: 10px; /* Espacio debajo del encabezado */
+  color: #3e3e3e; /* Color más oscuro para encabezados */
+}
+
+.panel p {
+  font-size: 1rem; /* Tamaño de texto más legible */
+  padding: 0.5rem 0; /* Espaciado vertical */
+  color: #555; /* Color de texto más claro */
+  letter-spacing: 3.5px; /* Ajusta este valor para estrechar más o menos */
+}
+
+.btn.transparent {
+  background-color: #f8c8e6; /* Color de fondo claro */
+  margin: 10px 0; /* Espaciado superior e inferior */
+  background: none;
+  border: 2px solid #ffcbf8; /* Borde de color oscuro */
+  width: 130px;
+  height: 41px;
+  font-weight: 600;
+  font-size: 0.9rem; /* Tamaño de fuente ligeramente mayor */
+  color: #3e3e3e; /* Color del texto del botón */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.btn.transparent:hover {
+  background-color: #fad1ff; /* Color más oscuro al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de levantamiento al pasar el mouse */
+}
+
+.right-panel .image,
+.right-panel .content {
+  transform: translateX(800px);
+}
+
+/* ANIMATION */
+
+.container.sign-up-mode:before {
+  transform: translate(100%, -50%);
+  right: 52%;
+}
+
+.container.sign-up-mode .left-panel .image,
+.container.sign-up-mode .left-panel .content {
+  transform: translateX(-800px);
+}
+
+.container.sign-up-mode .signin-signup {
+  left: 25%;
+}
+
+.container.sign-up-mode form.sign-up-form {
+  opacity: 1;
+  z-index: 2;
+}
+
+.container.sign-up-mode form.sign-in-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.sign-up-mode .right-panel .image,
+.container.sign-up-mode .right-panel .content {
+  transform: translateX(0%);
+}
+
+.container.sign-up-mode .left-panel {
+  pointer-events: none;
+}
+
+.container.sign-up-mode .right-panel {
+  pointer-events: all;
+}
+
+@media (max-width: 870px) {
+  .container {
+    min-height: 800px;
+    height: 100vh;
+  }
+  .signin-signup {
+    width: 100%;
+    top: 95%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+
+  .signin-signup,
+  .container.sign-up-mode .signin-signup {
+    left: 50%;
+  }
+
+  .panels-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+
+  .panel {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 8%;
+    grid-column: 1 / 2;
+  }
+
+  .right-panel {
+    grid-row: 3 / 4;
+  }
+
+  .left-panel {
+    grid-row: 1 / 2;
+  }
+
+  .image {
+    width: 200px;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+  }
+
+  .panel .content {
+    padding-right: 15%;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.8s;
+  }
+
+  .panel h3 {
+    font-size: 1.2rem;
+  }
+
+  .panel p {
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+  }
+
+  .btn.transparent {
+    width: 110px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+
+  .container:before {
+    width: 1500px;
+    height: 1500px;
+    transform: translateX(-50%);
+    left: 30%;
+    bottom: 68%;
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
+  }
+
+  .container.sign-up-mode:before {
+    transform: translate(-50%, 100%);
+    bottom: 32%;
+    right: initial;
+  }
+
+  .container.sign-up-mode .left-panel .image,
+  .container.sign-up-mode .left-panel .content {
+    transform: translateY(-300px);
+  }
+
+  .container.sign-up-mode .right-panel .image,
+  .container.sign-up-mode .right-panel .content {
+    transform: translateY(0px);
+  }
+
+  .right-panel .image,
+  .right-panel .content {
+    transform: translateY(300px);
+  }
+
+  .container.sign-up-mode .signin-signup {
+    top: 0%;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 570px) {
+  form {
+    padding: 0 1.5rem;
+  }
+
+  .image {
+    display: none;
+  }
+  .panel .content {
+    padding: 0.5rem 1rem;
+  }
+  .container {
+    padding: 1.5rem;
+  }
+
+  .container:before {
+    bottom: 72%;
+    left: 50%;
+  }
+
+  .container.sign-up-mode:before {
+    bottom: 28%;
+    left: 50%;
+  }
+}

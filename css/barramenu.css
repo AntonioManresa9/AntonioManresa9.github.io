@@ -1,0 +1,66 @@
+/* Estilos para la barra de navegación */
+.navbar {
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 10; /* Asegúrate de que esté por encima */
+    background-color: transparent; /* Sin fondo */
+    padding: 10px 20px; /* Espacio interno */
+}
+
+/* Contenedor para los enlaces centrados */
+.navbar .center-links {
+    display: flex; /* Usar flexbox para alinear enlaces */
+    justify-content: center; /* Centrar los enlaces horizontalmente */
+    flex-grow: 1; /* Permitir que este contenedor crezca para ocupar el espacio disponible */
+}
+
+/* Estilo para los enlaces en la barra de navegación */
+.navbar a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    padding: 20px 20px; /* Espaciado alrededor de los enlaces */
+    text-align: center; /* Centrar texto */
+    transition: background-color 0.3s; /* Transición suave al pasar el ratón */
+    margin: 0 20px; /* Espaciado lateral */
+    font-size: large; /* Tamaño de fuente */
+}
+
+/* Estilo específico para el botón de Login */
+.navbar .login-button {
+    margin-left: auto; /* Empuja el botón a la derecha */
+    display: flex; /* Flexbox para centrar verticalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding: 0; /* Sin padding */
+}
+
+/* Efecto de hover para los enlaces */
+.navbar a:hover {
+    background-color: #a7a7a74b; /* Color de fondo al pasar el ratón */
+    border-radius: 15%;
+}
+
+/* Efecto de hover para el botón de Login */
+.login-button:hover {
+    
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .navbar {
+      padding: 0px; /* Reduce el padding en la barra de navegación */
+  }
+  .navbar .center-links {
+      flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+      align-items: center; /* Centrar los elementos en la columna */
+  }
+  .navbar a {
+      padding: 0px 10px; /* Reduce el espaciado de los enlaces */
+      margin: 2px 0; /* Reduce el espaciado vertical entre enlaces */
+      font-size: medium; /* Tamaño de fuente más pequeño */
+  }
+}
+
+
+  

@@ -1,0 +1,356 @@
+/* styles.css - Estilos para la estructura semántica */
+
+* {
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho y alto */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-body-bg);
+    color: #000;
+}
+
+.login-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px; /* Ajusta según sea necesario */
+}
+
+
+header {
+    width: 100%;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-header-bg);
+    color: var(--color-header-text);
+    padding: 20px;
+    position: relative;
+    z-index: 100;
+}
+
+nav {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: end;
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    width: 100%; 
+}
+
+nav .tamanio {
+    font-size: 25px;
+}
+
+nav .logo{
+    margin-left: -50px;
+    margin-right: 50px;
+}
+
+nav ul li.logo {
+    font-size: 25px;
+}
+
+nav ul li:not(.logo) {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/* Estructura principal */
+main {
+    padding: 40px;
+    background-color: #333;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Contenedor del botón de usuario y desplegable */
+.user-container {
+    position: relative;
+    display: inline-block;
+    z-index: 9999;
+}
+
+.user-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 100px;
+    text-align: center;
+    z-index: 9999;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+.user-container:hover .dropdown-menu {
+    display: block;
+}
+
+/* Menú desplegable de Servicios */
+.dropdown-services {
+    position: relative;
+    display: inline-block;
+    padding-top: 10px;
+    padding-block-end: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 70%;
+    background-color: #ffffff;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    border-radius: 8px;
+    margin-left: -20px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown-services:hover .dropdown-content {
+    display: block;
+}
+
+/* Otros estilos generales */
+aside {
+    background-color: #000000;
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 300px;
+}
+
+footer {
+    background-color: #4a4848;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+#inicio h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+#inicio p {
+    font-size: 16px;
+    text-align: center;
+}
+
+#slider {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    overflow: hidden;
+    background-color: black;
+}
+
+#slider img {
+    margin: 0 auto;
+    transition: opacity 2s;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    opacity: 0;
+}
+
+#slider img:nth-child(1) {
+    opacity: 1;
+}
+
+table {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    background-color: white;
+    border: 0;
+}
+
+#izquierda {
+    text-align: right;
+}
+
+#derecha {
+    text-align: left;
+}
+
+/* Contenedor de servicios */
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding-top: 80px;
+}
+
+.service {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 1.2s;
+    margin: 10px;
+}
+
+.service img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.service:hover {
+    transform: scale(1.1);
+}
+
+.description {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+button img {
+    width: 40px; 
+    height: 40px; 
+}
+
+button:focus {
+    outline: none; 
+}
+
+button:hover img {
+    filter: brightness(1.2); 
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+    .wrapper .logo2 {
+        width: 50%;
+    }
+
+
+    nav {
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    nav .menu {
+        padding-left: 100px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .service img {
+        max-width: 200px;
+    }
+
+    #slider {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .wrapper .logo2 {
+        width: 50%;
+    }
+
+    nav {
+        font-size: 18px;
+    }
+
+    #inicio h2 {
+        font-size: 20px;
+    }
+
+    #inicio p {
+        font-size: 14px;
+    }
+
+    button img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Boton de login*/
+    
+    
+}

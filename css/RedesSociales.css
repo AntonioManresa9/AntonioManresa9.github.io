@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  margin: 0;
+  margin: 0px auto;
+}
+
+.iconRedes {
+  background-color: #4a4848;
+  text-align: center;
+  padding: 30px 0;
+  width: 100%;
+}
+
+.iconRedes .button {
+  text-align: left;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  text-decoration: none;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+  mix-blend-mode: screen;
+}
+
+.iconRedes .button:hover {
+  width: 200px;
+}
+
+.iconRedes .button .icon {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  color: #000;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+
+.iconRedes .button:hover .icon {
+  transition: all 0.3s ease-out;
+  width: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.iconRedes .button:nth-child(1):hover .icon {
+  background: #4267B2;
+}
+.iconRedes .button:nth-child(2):hover .icon {
+  background: #e24023;
+}
+.iconRedes .button:nth-child(3):hover .icon {
+  background: #312c2e;
+}
+.iconRedes .button:nth-child(4):hover .icon {
+  background: #e71010;
+}
+
+.iconRedes .button .icon i {
+  font-size: 25px;
+  line-height: 40px;
+  transition: all 0.3s ease-out;
+}
+
+.iconRedes .button:hover .icon i {
+  color: #fff;
+}
+
+.iconRedes .button span {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 35px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+
+.iconRedes .button:nth-child(1) span {
+  color: #4267B2;
+}
+.iconRedes .button:nth-child(2) span {
+  color: #dd4d4d;
+}
+.iconRedes .button:nth-child(3) span {
+  color: #2e2b2c;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .iconRedes {
+    padding: 10px 0;
+  }
+
+  .iconRedes .button {
+    height: 40px;
+    width: 40px;
+  }
+
+  .iconRedes .button:hover {
+    width: 150px;
+  }
+
+  .iconRedes .button .icon i {
+    font-size: 20px;
+  }
+
+  .iconRedes .button span {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .iconRedes .button {
+    height: 30px;
+    width: 30px;
+  }
+
+  .iconRedes .button:hover {
+    width: 120px;
+  }
+
+  .iconRedes .button .icon i {
+    font-size: 18px;
+  }
+
+  .iconRedes .button span {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
