@@ -328,6 +328,7 @@ header a {
     .thumbnail {
         grid-template-columns: repeat(2, 1fr); /* Asegura dos columnas en pantallas más pequeñas */
         gap: 5px;
+        padding: 25px;
     }
 
     .thumbnail .item {
@@ -337,6 +338,7 @@ header a {
     .arrows {
         bottom: 65px;
         gap: 5px;
+        padding: 25px;
     }
 
     .arrows button {
