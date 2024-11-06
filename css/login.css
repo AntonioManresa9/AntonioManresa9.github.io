@@ -409,6 +409,7 @@ form.sign-in-form {
   .container {
     min-height: 800px;
     height: 100vh;
+    overflow-y: hidden;
   }
   .signin-signup {
     width: 100%;
@@ -548,6 +549,7 @@ form.sign-in-form {
   }
   .container {
     padding: 1.5rem;
+    overflow-y: hidden;
   }
 
   .container:before {
