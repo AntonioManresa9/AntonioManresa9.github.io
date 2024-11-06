@@ -313,12 +313,12 @@ form.sign-in-form {
 
 .left-panel {
   pointer-events: all;
-  padding: 3rem 17% 2rem 12%;
+  padding: 5rem 18% 25rem 4%;
 }
 
 .right-panel {
   pointer-events: none;
-  padding: 3rem 12% 2rem 17%;
+  padding: 6rem 6% 27rem 16%;
 }
 
 .panel .content {
@@ -412,8 +412,9 @@ form.sign-in-form {
     overflow-y: hidden;
   }
   .signin-signup {
+    padding-left: 20px;
     width: 100%;
-    top: 95%;
+    top: 93%;
     transform: translate(-50%, -100%);
     transition: 1s 0.8s ease-in-out;
   }
@@ -510,8 +511,27 @@ form.sign-in-form {
 }
 
 @media (max-width: 480px) {
+
+  .social-text {
+    padding: 0px;
+    font-size: 1rem;
+}
+
+  .button-inicio {
+    margin: -10px;
+    
+}
+
+  .signin-signup {
+    padding-left: 20px;
+    width: 100%;
+    top: 93%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+
   form {
-    padding: 0 1.5rem;
+    padding: 0 2.5rem;
   }
 
   .image {
@@ -523,6 +543,7 @@ form.sign-in-form {
   .container {
     padding: 1.5rem;
     overflow-y: hidden;
+    overflow-x: hidden;
   }
 
   .container:before {
@@ -534,11 +555,21 @@ form.sign-in-form {
     bottom: 28%;
     left: 50%;
   }
+  
 }
 
 @media (max-width: 570px) {
+
+  .signin-signup {
+    padding-left: 20px;
+    width: 100%;
+    top: 93%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+  
   form {
-    padding: 0 1.5rem;
+    padding: 0 3.5rem;
   }
 
   .image {
