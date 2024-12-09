@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="css/RedesSociales.css">
     <link rel="stylesheet" href="css/login.css" />
+    <script type="module" src="./javascript/firebase.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js" defer></script>
   </head>
   <body>
 
@@ -18,7 +20,7 @@
             <h2 class="title">Accede con tu cuenta</h2>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" id="usuario" placeholder=" " required />
+              <input type="email" id="usuario" name="email" placeholder=" " required />
               <label for="usuario">Email</label>
           </div>
             <div class="input-field">
@@ -51,12 +53,12 @@
             <h2 class="title">Regístrate</h2>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" id="usuario" placeholder="" required />
+              <input type="email" id="email" placeholder="" required />
               <label for="usuario">Email</label>
           </div>
             <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="" required />
+                <input type="text" id="nombre" placeholder="" required />
                 <label for="nombre">Nombre Completo</label>
             </div>
             <div class="input-field">
@@ -94,8 +96,6 @@
           </form>
         </div>
       </div>
-
-        </form>
         <script src="javascript/visiblePassw.js"></script>
         <script src="javascript/ValidacionDateEmail.js"></script>
         

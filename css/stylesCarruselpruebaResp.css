@@ -2,7 +2,8 @@
 
 a {
     text-decoration: none;
-    color: inherit; /* Para heredar el color del padre */
+    color: inherit;
+    /* Para heredar el color del padre */
 }
 
 header {
@@ -21,93 +22,220 @@ header a {
     margin-right: 40px;
 }
 
+/*COOKIES*/
+/* Capa de fondo para bloquear la interacción */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo translúcido */
+    display: none; /* Ocultar por defecto */
+    z-index: 9998; /* Queda detrás del cuadro de cookies */
+}
+
+/* COOKIES */
+.cookie-dialog {
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra suave para el cuadro */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrar vertical y horizontalmente */
+    z-index: 9999;
+    font-family: 'Arial', sans-serif;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Contenido del cuadro */
+.cookie-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9; /* Fondo claro para el contenido */
+    padding: 30px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Icono de la cookie */
+.cookie-icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+/* Mensaje de las cookies */
+.cookie-message {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Estilo del botón */
+.cookie-btn {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Hover para el botón */
+.cookie-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Animación para la entrada */
+.cookie-dialog {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Animación para el cuadro de cookies */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+}
+
 
 /* carousel */
 .carousel {
-    height: 100vh; /* Altura completa de la ventana */
-    width: 100vw; /* Ancho completo de la ventana */
-    position: fixed; /* Mantenerlo fijo en la parte superior */
+    height: 100vh;
+    /* Altura completa de la ventana */
+    width: 100vw;
+    /* Ancho completo de la ventana */
+    position: fixed;
+    /* Mantenerlo fijo en la parte superior */
     top: 0;
     left: 0;
     overflow: hidden;
-    z-index: 1; /* Z-index menor para que esté detrás de la barra de menú */
+    z-index: 1;
+    /* Z-index menor para que esté detrás de la barra de menú */
 }
 
 .carousel .list .item {
-    width: 100vw; /* Ancho completo */
-    height: 100vh; /* Altura completa */
+    width: 100vw;
+    /* Ancho completo */
+    height: 100vh;
+    /* Altura completa */
     position: absolute;
-    inset: 0; /* Ocupa todo el contenedor */
+    inset: 0;
+    /* Ocupa todo el contenedor */
 }
 
 .carousel .list .item img {
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    object-fit: cover; /* Mantiene la proporción de la imagen */
+    width: 100%;
+    /* Ancho completo */
+    height: 100%;
+    /* Altura completa */
+    object-fit: cover;
+    /* Mantiene la proporción de la imagen */
 }
 
 /* Barra de menú */
 .navbar {
-    position: fixed; /* Fija en la parte superior */
+    position: fixed;
+    /* Fija en la parte superior */
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10; /* Asegúrate de que esté por encima */
-    background-color: #00000054; /* Sin fondo */
-    padding: 10px 20px; /* Espacio interno */
-    display: flex; /* Usar flexbox para alinear elementos */
-    justify-content: space-between; /* Espacio entre los elementos */
-    align-items: center; /* Centra verticalmente */
+    z-index: 10;
+    /* Asegúrate de que esté por encima */
+    background-color: #00000054;
+    /* Sin fondo */
+    padding: 10px 20px;
+    /* Espacio interno */
+    display: flex;
+    /* Usar flexbox para alinear elementos */
+    justify-content: space-between;
+    /* Espacio entre los elementos */
+    align-items: center;
+    /* Centra verticalmente */
 }
 
 /* Estilos para los enlaces en la barra de menú */
 .center-links a {
-    color: white; /* Color del texto */
-    margin-right: 40px; /* Margen a la derecha */
+    color: white;
+    /* Color del texto */
+    margin-right: 40px;
+    /* Margen a la derecha */
 }
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     .navbar {
-        padding: 10px 10px; /* Reduce el padding en pantallas pequeñas */
+        padding: 10px 10px;
+        /* Reduce el padding en pantallas pequeñas */
     }
 
     .center-links a {
-        margin-right: 20px; /* Menor margen en móviles */
+        margin-right: 20px;
+        /* Menor margen en móviles */
     }
 }
 
 @media screen and (max-width: 480px) {
     .carousel .list .item .content {
-        padding: 5px; /* Reduce el padding en pantallas pequeñas */
+        padding: 5px;
+        /* Reduce el padding en pantallas pequeñas */
     }
 
     .carousel .list .item .title {
-        font-size: 2.5em; /* Ajusta el tamaño de la fuente en móviles */
+        font-size: 2.5em;
+        /* Ajusta el tamaño de la fuente en móviles */
     }
 
     .carousel .list .item .topic {
-        font-size: 2em; /* Ajusta el tamaño de la fuente en móviles */
+        font-size: 2em;
+        /* Ajusta el tamaño de la fuente en móviles */
     }
 }
 
 .carousel .list .item .content {
     position: absolute;
     top: 20%;
-    width: 90%; /* Ajuste para responsividad */
+    width: 90%;
+    /* Ajuste para responsividad */
     left: 48%;
     transform: translateX(-50%);
     box-sizing: border-box;
     color: #fff;
     text-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-    max-width: 900px;    /* No se expandirá más allá de 600px */
-    margin-left: 0;      /* Alineado a la izquierda */
-    padding: 10px;       /* Espacio interno alrededor del texto */
+    max-width: 900px;
+    /* No se expandirá más allá de 600px */
+    margin-left: 0;
+    /* Alineado a la izquierda */
+    padding: 10px;
+    /* Espacio interno alrededor del texto */
 }
 
 .carousel .list .item .author {
     font-weight: bold;
-    letter-spacing: 2px; /* Reducir el espaciado en móviles */
+    letter-spacing: 2px;
+    /* Reducir el espaciado en móviles */
 }
 
 .carousel .list .item .title,
@@ -143,45 +271,57 @@ header a {
 }
 
 /* thumbnail */
+/* Estilos para las cards (miniaturas) */
 .thumbnail {
     position: absolute;
-    bottom: 20px;
-    left: 48%;
+    bottom: 30px;
+    /* Separa las miniaturas del borde inferior */
+    left: 50%;
     transform: translateX(-50%);
     z-index: 100;
     display: flex;
-    gap: 70px;
+    gap: 30px;
+    /* Espaciado entre las miniaturas */
 }
 
 .thumbnail .item {
-    width: 150px;
-    height: 220px;
+    width: 200px;
+    height: 260px;
     flex-shrink: 0;
     position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 15px 6px 8px rgba(0, 0, 0, 0.671);
+    /* Sombra para separar del fondo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .thumbnail .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px;
 }
 
-.thumbnail .item:hover img {
+.thumbnail .item:hover {
     transform: scale(1.05);
+    /* Efecto de zoom al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    /* Mayor sombra al hover */
 }
 
 .thumbnail .item .content {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    /* Fondo oscuro semitransparente */
     color: #fff;
-    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+    text-align: center;
 }
 
 .thumbnail .item .content .title {
-    font-weight: 500;
+    font-weight: bold;
     font-size: 1em;
 }
 
@@ -190,15 +330,47 @@ header a {
     font-size: 0.9em;
 }
 
-/* arrows */
+/* Estilos para las flechas */
 .arrows {
     position: absolute;
-    bottom: 20px;
+    top: 60%;
+    /* Centra las flechas verticalmente */
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 90px 50px; /* Espaciado en los lados */
+    /* Flechas a los extremos laterales */
+    transform: translateY(-50%);
     z-index: 100;
+    padding: 0 20px;
+    /* Espaciado desde los bordes */
+}
+
+.arrows .arrow {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    /* Fondo blanco semitransparente */
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.arrows .arrow:hover {
+    transform: scale(1.1);
+    /* Aumenta el tamaño al pasar el cursor */
+    background: #e0e0e083;
+    /* Fondo blanco sólido al hover */
+}
+
+.arrows .arrow img {
+    /* Ajusta el tamaño del icono */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .arrows button {
@@ -225,15 +397,11 @@ header a {
     z-index: 1;
 }
 
-/* ... (resto de tu CSS sin cambios) ... */
-
 /* Media Queries */
 @media (max-width: 768px) {
 
     .carousel .list .item .content {
-        
         top: 21%;
-       
     }
 
     .thumbnail .item {
@@ -278,24 +446,30 @@ header a {
 
 @media screen and (max-width: 768px) {
     header a {
-        margin-right: 20px; /* Ajustar el margen en móviles */
+        margin-right: 20px;
+        /* Ajustar el margen en móviles */
     }
 
     .carousel .list .item .content {
-        padding-right: 10px; /* Reducir padding en móviles */
+        padding-right: 10px;
+        /* Reducir padding en móviles */
     }
 
     .carousel .list .item .content .title {
-        font-size: 3em; /* Ajustar tamaño de fuente en móviles */
+        font-size: 3em;
+        /* Ajustar tamaño de fuente en móviles */
     }
 
     .carousel .list .item .topic {
-        font-size: 2.5em; /* Ajustar tamaño de fuente en móviles */
+        font-size: 2.5em;
+        /* Ajustar tamaño de fuente en móviles */
     }
 
     .thumbnail {
-        display: grid; /* Cambia a diseño de cuadrícula */
-        grid-template-columns: repeat(2, 1fr); /* Dos elementos por fila */
+        display: grid;
+        /* Cambia a diseño de cuadrícula */
+        grid-template-columns: repeat(2, 1fr);
+        /* Dos elementos por fila */
         gap: 10px;
         justify-content: center;
     }
@@ -318,15 +492,18 @@ header a {
 
 @media screen and (max-width: 480px) {
     .carousel .list .item .content .title {
-        font-size: 2em; /* Ajustar aún más para pantallas pequeñas */
+        font-size: 2em;
+        /* Ajustar aún más para pantallas pequeñas */
     }
 
     .carousel .list .item .content .topic {
-        font-size: 1.8em; /* Ajustar aún más para pantallas pequeñas */
+        font-size: 1.8em;
+        /* Ajustar aún más para pantallas pequeñas */
     }
 
     .thumbnail {
-        grid-template-columns: repeat(2, 1fr); /* Asegura dos columnas en pantallas más pequeñas */
+        grid-template-columns: repeat(2, 1fr);
+        /* Asegura dos columnas en pantallas más pequeñas */
         gap: 5px;
         padding: 25px;
     }
@@ -344,5 +521,52 @@ header a {
     .arrows button {
         width: 30px;
         height: 30px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+    header {
+        max-width: 90%;
+        /* Ajusta el ancho máximo del header */
+        height: 60px;
+        /* Mayor altura para portátiles */
+    }
+
+    .center-links a {
+        margin-right: 30px;
+        /* Ajustar espacio entre enlaces */
+    }
+
+    .carousel .list .item .content {
+        width: 80%;
+        /* Ajustar ancho del contenido */
+        top: 16%;
+        /* Mejor alineación vertical */
+        font-size: 1rem;
+        /* Ajuste general de tipografía */
+    }
+
+    .carousel .list .item .title {
+        font-size: 3.5em;
+        /* Tamaño del título */
+    }
+
+    .carousel .list .item .topic {
+        font-size: 2.8em;
+        /* Tamaño del subtítulo */
+    }
+
+    .thumbnail .item {
+        width: 140px;
+        height: 200px;
+    }
+
+    .thumbnail {
+        gap: 50px;
+    }
+
+    .arrows button {
+        width: 40px;
+        height: 40px;
     }
 }

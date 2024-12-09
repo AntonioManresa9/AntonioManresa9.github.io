@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,187 +14,196 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="barra.css" />
     <link rel="stylesheet" href="css/stylesCarruselpruebaResp.css">
-    <link rel="stylesheet" href="css/RedesSociales.css"/>
+    <link rel="stylesheet" href="css/RedesSociales.css" />
     <!--<link rel="stylesheet" href="css/barramenu.css"/>-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="css/styles.css">
-    <script src= "https://www.gstatic.com/firebasejs/3.7.4/firebase.js" ></script>
-    
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script src="./javascript/cookies.js"></script>
+
     <title>Esencia Terapéutica</title>
 </head>
+
 <body>
+
+<!-- Capa de fondo para bloquear la interacción -->
+<div id="overlay" class="overlay"></div>
+
+<!-- Aviso de Cookies -->
+<div id="cookieDialog" class="cookie-dialog">
+    <div class="cookie-content">
+        <div class="cookie-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/cookie.png" alt="cookie" />
+        </div>
+        <p class="cookie-message">Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta su uso.</p>
+        <button id="acceptCookies" class="cookie-btn">Aceptar</button>
+    </div>
+</div>
+
+
+
+
+
     <div class="wrapper">
         <nav class="contenedor">
-          <a href="#" class="logo">ESENCIA TERAPÉUTICA</a>
-          <input type="checkbox" name="" id="toggle">
-          <label for="toggle"><i class="material-icons">menu</i></label>
-          <div class="menu">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <div class="dropdown-services">
-                <a href="#services">Servicios</a>
-                <div class="dropdown-content">
-                    <a href="servicios.html">Servicio 1</a>
-                    <a href="servicios.html">Servicio 2</a>
-                    <a href="servicios.html">Servicio 3</a>
-                </div>
-            </div>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              
-            </ul>
-          </div>
-          <div class="login-button">
-            <a href="login.html">
-                <img src="image/Cuenta blanco.png" alt="Logo" class="logo2" />
-            </a>
-        </div>
-        </nav>
-        
-      </div>
-    <!-- Menú de navegación 
-    <div class="navbar">
-        <div class="center-links">
-            <a href="#home">Inicio</a>
-            <a href="#contact">Contacto</a>
-            <div class="dropdown-services">
-                <a href="#services">Servicios</a>
-                 Menú desplegable de servicios 
-                <div class="dropdown-content">
-                    <a href="servicios.html">Servicio 1</a>
-                    <a href="servicios.html">Servicio 2</a>
-                    <a href="servicios.html">Servicio 3</a>
-                </div>
+            <a href="index.html" class="logo">ESENCIA TERAPÉUTICA</a>
+            <input type="checkbox" name="" id="toggle">
+            <label for="toggle"><i class="material-icons">menu</i></label>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <div class="dropdown-services">
+                        <a href="#services">Servicios</a>
+                        <div class="dropdown-content">
+                            <a href="servicios.html">Kobido</a>
+                            <a href="servicios.html">Shiatsu</a>
+                            <a href="servicios.html">Corporal Completo</a>
+                            <a href="servicios.html">Corporal Específico</a>
+                            <a href="servicios.html">Reflexología Podal</a>
+                        </div>
+                    </div>
+                    <li><a href="map.html">Contacto</a></li>
 
+                </ul>
             </div>
-        </div>
-        <div class="login-button">
-            <a href="login.html">
-                <img src="image/Cuenta blanco.png" alt="Logo" class="logo" />  Imagen 
-            </a>
-        </div>
-            
-        </div>
-        
-        
-    </div>-->
-    
-  
+            <div class="login-button">
+                <a href="login.html">
+                    <img src="image/Cuenta blanco.png" alt="Logo" class="logo2" />
+                </a>
+            </div>
+        </nav>
+
+    </div>
     <!-- Contenido principal del sitio web -->
     <main>
+        <!-- carousel -->
+        <div id="inicio" class="carousel">
+            <!-- list item -->
+            <div class="list">
+                <div class="item">
+                    <img src="image/masajeespalda.png" alt="Masaje Corporal">
+                    <div class="content">
+                        <div class="author">ESENCIA TERAPEUTICA</div>
+                        <div class="title">MASAJE CORPORAL</div>
+                        <div class="topic">ESPECIFICO</div>
+                        <div class="des">
+                            El masaje relajante corporal específico se enfoca en áreas concretas del cuerpo, como
+                            cuello, espalda o piernas, utilizando técnicas suaves para aliviar tensiones localizadas,
+                            reducir dolores musculares y fomentar una sensación general de relajación y bienestar.
+                        </div>
+                        <div class="buttons">
+                            <button><a href="servicios.html">VER MÁS</a></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repite las demás secciones aquí -->
+                <div class="item">
+                    <img src="image/MasajeCara.jpeg" alt="Masaje Facial">
+                    <div class="content">
+                        <div class="author">ESENCIA TERAPEUTICA</div>
+                        <div class="title">MASAJE FACIAL</div>
+                        <div class="topic">KOBIDO</div>
+                        <div class="des">
+                            El masaje Kobido es una técnica ancestral japonesa que combina movimientos suaves y precisos
+                            para estimular la circulación,
+                            relajar los músculos faciales y promover un efecto rejuvenecedor natural en la piel.
+                        </div>
+                        <div class="buttons">
+                            <button><a href="servicios.html">VER MÁS</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/shiatsu.jpg" alt="Masaje Técnica">
+                    <div class="content">
+                        <div class="author">ESENCIA TERAPEUTICA</div>
+                        <div class="title">MASAJE TÉCNICA</div>
+                        <div class="topic">SHIATSU</div>
+                        <div class="des">
+                            El masaje facial Shiatzu es una técnica japonesa que aplica presión sobre puntos específicos
+                            del rostro, utilizando los dedos y las palmas,
+                            para equilibrar la energía, aliviar tensiones y mejorar la circulación, promoviendo una piel
+                            más fresca y relajada.
+                        </div>
+                        <div class="buttons">
+                            <button><a href="servicios.html">VER MÁS</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/masajeEspalda (2).png" alt="Masaje Corporal Completo">
+                    <div class="content">
+                        <div class="author">ESENCIA TERAPEUTICA</div>
+                        <div class="title">MASAJE CORPORAL</div>
+                        <div class="topic">CUERPO COMPLETO</div>
+                        <div class="des">
+                            El masaje relajante corporal es una técnica que utiliza movimientos lentos y suaves en todo
+                            el cuerpo para liberar tensiones,
+                            reducir el estrés y promover una profunda sensación de bienestar físico y mental.
+                        </div>
+                        <div class="buttons">
+                            <button><a href="servicios.html">VER MÁS</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- list thumbnail -->
+            <div class="thumbnail">
+                <div class="item">
+                    <a href="servicios.html">
+                        <img src="image/masajeespalda.png" alt="Masaje Corporal Thumbnail">
+                        <div class="content">
+                            <div class="title">Corporal</div>
+                            <div class="description">Específico</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="servicios.html">
+                        <img src="image/MasajeCara.jpeg" alt="Masaje Facial Thumbnail">
+                        <div class="content">
+                            <div class="title">Facial</div>
+                            <div class="description">Kobido</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="servicios.html">
+                        <img src="image/shiatsu.jpg" alt="Masaje Técnica Thumbnail">
+                        <div class="content">
+                            <div class="title">Técnica</div>
+                            <div class="description">Shiatsu</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="servicios.html">
+                        <img src="image/masajeEspalda (2).png" alt="Masaje Corporal Completo Thumbnail">
+                        <div class="content">
+                            <div class="title">Corporal</div>
+                            <div class="description">Cuerpo Completo</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
-        
-    <!-- carousel -->
-    <div id="inicio" class="carousel">
-        <!-- list item -->
-        <div class="list">
-            <div class="item">
-                <img src="image/masajeespalda.png" alt="Masaje Corporal">
-                <div class="content">
-                    <div class="author">ESENCIA TERAPEUTICA</div>
-                    <div class="title">MASAJE CORPORAL</div>
-                    <div class="topic">ESPECIFICO</div>
-                    <div class="des">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                    </div>
-                    <div class="buttons">
-                        <button><a href="servicios.html">VER MÁS</a></button>
-                    </div>
-                </div>
+            <!-- next prev -->
+            <div class="arrows">
+                <button id="prev" class="arrow">
+                    <img src="image/arrow-left-circle-svgrepo-com.png" alt="Previous">
+                </button>
+                <button id="next" class="arrow">
+                    <img src="image/arrow-right-circle-svgrepo-com.png" alt="Next">
+                </button>
             </div>
-            <!-- Repite las demás secciones aquí -->
-            <div class="item">
-                <img src="image/MasajeCara.jpeg" alt="Masaje Facial">
-                <div class="content">
-                    <div class="author">ESENCIA TERAPEUTICA</div>
-                    <div class="title">MASAJE FACIAL</div>
-                    <div class="topic">KOBIDO</div>
-                    <div class="des">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                    </div>
-                    <div class="buttons">
-                        <button><a href="servicios.html">VER MÁS</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="image/shiatsu.jpg" alt="Masaje Técnica">
-                <div class="content">
-                    <div class="author">ESENCIA TERAPEUTICA</div>
-                    <div class="title">MASAJE TÉCNICA</div>
-                    <div class="topic">SHIATSU</div>
-                    <div class="des">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                    </div>
-                    <div class="buttons">
-                        <button><a href="servicios.html">VER MÁS</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="image/masajeEspalda (2).png" alt="Masaje Corporal Completo">
-                <div class="content">
-                    <div class="author">ESENCIA TERAPEUTICA</div>
-                    <div class="title">MASAJE CORPORAL</div>
-                    <div class="topic">CUERPO COMPLETO</div>
-                    <div class="des">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                    </div>
-                    <div class="buttons">
-                        <button><a href="servicios.html">VER MÁS</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- list thumbnail -->
-        <div class="thumbnail">
-            <div class="item">
-                <img src="image/masajeespalda.png" alt="Masaje Corporal Thumbnail">
-                <div class="content">
-                    <div class="title">Corporal</div>
-                    <div class="description">Específico</div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="image/MasajeCara.jpeg" alt="Masaje Facial Thumbnail">
-                <div class="content">
-                    <div class="title">Facial</div>
-                    <div class="description">Kobido</div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="image/shiatsu.jpg" alt="Masaje Técnica Thumbnail">
-                <div class="content">
-                    <div class="title">Técnica</div>
-                    <div class="description">Shiatsu</div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="image/masajeEspalda (2).png" alt="Masaje Corporal Completo Thumbnail">
-                <div class="content">
-                    <div class="title">Corporal</div>
-                    <div class="description">Cuerpo Completo</div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- next prev -->
-        <div class="arrows">
-            <button id="prev">
-                <img src="image/arrow-left-circle-svgrepo-com.png" alt="Previous">
-            </button>
-            <button id="next">
-                <img src="image/arrow-right-circle-svgrepo-com.png" alt="Next">
-            </button>
-        </div>
-        
-        <!-- time running -->
-        <div class="time"></div>
-    </div>
 
-    <script src="javascript/carruselAvanzado.js"></script>
-        
+            <!-- time running -->
+            <!-- <div class="time"></div> -->
+        </div>
+
+        <script src="javascript/carruselAvanzado.js"></script>
+
     </main>
 </body>
-</html>
 
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación de Mi Tienda</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="./css/map.css"> <!-- Estilo adicional si lo tienes -->
+    <script src="./javascript/map.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Iconos Material -->
+</head>
+<body>
+
+ <!-- Menú de navegación -->
+<div class="wrapper">
+    <nav class="contenedor">
+        <a href="index.html" class="logo">ESENCIA TERAPÉUTICA</a>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown-services">
+                    <a href="#services">Servicios</a>
+                    <div class="dropdown-content">
+                        <a href="servicios.html">Servicio 1</a>
+                        <a href="servicios.html">Servicio 2</a>
+                        <a href="servicios.html">Servicio 3</a>
+                    </div>
+                </li>
+                <!-- <li><a href="#">Contact</a></li> -->
+            </ul>
+        </div>
+        <div class="login-button">
+            <a href="login.html">
+                <img src="image/Cuenta blanco.png" alt="Logo" class="logo2" />
+            </a>
+        </div>
+    </nav>
+</div>
+
+
+
+    <div class="container">
+        <header>
+            <h1>Ubicación de Mi Tienda</h1>
+        </header>
+
+        <!-- Mapa -->
+        <div id="map"></div>
+        
+        <!-- Redes Sociales -->
+        <div class="iconRedes">
+            <a href="https://www.facebook.com/?locale=es_ES" class="button">
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/" class="button">
+                <div class="icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/es/" class="button">
+                <div class="icon">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <span>TikTok</span>
+            </a>
+            <a href="https://www.youtube.com/" class="button">
+                <div class="icon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <span>YouTube</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Esencia Terapéutica. Todos los derechos reservados.</p>
+        <p><a href="#contacto">Contacto</a> | <a href="#">Política de Privacidad</a></p>
+    </footer>
+
+    <!-- Vinculando los scripts de Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Vinculando tu archivo JS personalizado -->
+    <script src="app.js"></script>
+
+</body>
+</html>

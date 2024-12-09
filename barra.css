@@ -11,6 +11,9 @@
     width: 20%;
   }
 
+  .menu ul li a:hover {
+    color: #ddd;
+}
 
 nav {
   display: flex;
@@ -32,6 +35,27 @@ nav .logo {
   font-size: 1.5rem;
   text-decoration: none; /* Para eliminar subrayado del logo */
 }
+
+/* Efecto hover para el logo de texto */
+nav .logo:hover {
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6); /* Efecto de luz sutil */
+  transition: text-shadow 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Efecto hover para la clase logo2 */
+nav .login-button img.logo2:hover {
+  transform: scale(1.2); /* Escala la imagen un 20% más grande */
+  transition: transform 0.3s ease-in-out; /* Hace la transición suave */
+  filter: brightness(1.2); /* Aumenta el brillo de la imagen */
+}
+
+/* Efecto hover para los enlaces del menú */
+nav .menu ul li a:hover {
+  color: #ffdddd; /* Color ligeramente más claro */
+  text-shadow: 0px 0px 6px rgba(99, 99, 99, 0.5); /* Brillo sutil */
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Transición suave */
+}
+
 
 nav .menu {
   flex-grow: 0; /* Hace que el menú ocupe el espacio disponible */
