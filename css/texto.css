@@ -1,65 +1,18 @@
-/* Reset CSS */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-/* Menú de navegación */
-nav {
-    background-color: #704a4a;
-    padding: 15px;
-}
-
-.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-}
-
-.logoservicios {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.menu li {
-    margin: 0 15px;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.menu a:hover {
-    color: #eedae1;
-}
-
 /* Sección de servicios */
 .services-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+    justify-content: center; /* Centra los elementos de los servicios */
 }
 
 .service {
-    background-color: white;
+    background-color: rgb(255, 221, 210); /* Fondo con opacidad */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 15px;
+    margin: 65px;
     padding: 15px;
     width: 300px;
     transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+   
 }
 
 .service img {
@@ -97,7 +50,7 @@ nav {
 @media (max-width: 480px) {
     .menu {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* Centra el menú en pantallas pequeñas */
     }
 
     .menu li {

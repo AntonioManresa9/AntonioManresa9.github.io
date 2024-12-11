@@ -5,29 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="noindex" />
-    <meta name="googlebot" content="noindex" />
-    <meta name="googlebot-news" content="noindex" />
-    <meta name="slurp" content="noindex" />
-    <meta name="msnbot" content="noindex" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="googlebot-news" content="noindex, nofollow" />
+    <meta name="slurp" content="noindex, nofollow" />
+    <meta name="msnbot" content="noindex, nofollow" />
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js" defer></script>
+    <script src="./javascript/cookies.js" defer></script>
+    <script src="javascript/carruselAvanzado.js" defer></script>
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="barra.css" />
-    <link rel="stylesheet" href="css/stylesCarruselpruebaResp.css">
-    <link rel="stylesheet" href="css/RedesSociales.css" />
-    <!--<link rel="stylesheet" href="css/barramenu.css"/>-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
-    <script src="./javascript/cookies.js"></script>
-
-    <title>Esencia Terapéutica</title>
+    <link rel="stylesheet" href="css/stylesCarruselpruebaResp.css">
 </head>
 
 <body>
-
-<!-- Capa de fondo para bloquear la interacción -->
-<div id="overlay" class="overlay"></div>
 
 <!-- Aviso de Cookies -->
 <div id="cookieDialog" class="cookie-dialog">
@@ -39,11 +32,7 @@
         <button id="acceptCookies" class="cookie-btn">Aceptar</button>
     </div>
 </div>
-
-
-
-
-
+<!-- Menú -->
     <div class="wrapper">
         <nav class="contenedor">
             <a href="index.html" class="logo">ESENCIA TERAPÉUTICA</a>
@@ -78,10 +67,9 @@
     <main>
         <!-- carousel -->
         <div id="inicio" class="carousel">
-            <!-- list item -->
             <div class="list">
                 <div class="item">
-                    <img src="image/masajeespalda.png" alt="Masaje Corporal">
+                    <img src="image/masajeespalda.png" alt="Masaje Corporal" loading="lazy">
                     <div class="content">
                         <div class="author">ESENCIA TERAPEUTICA</div>
                         <div class="title">MASAJE CORPORAL</div>
@@ -96,9 +84,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- Repite las demás secciones aquí -->
+
                 <div class="item">
-                    <img src="image/MasajeCara.jpeg" alt="Masaje Facial">
+                    <img src="image/MasajeCara.jpeg" alt="Masaje Facial" loading="lazy">
                     <div class="content">
                         <div class="author">ESENCIA TERAPEUTICA</div>
                         <div class="title">MASAJE FACIAL</div>
@@ -114,7 +102,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/shiatsu.jpg" alt="Masaje Técnica">
+                    <img src="image/shiatsu.jpg" alt="Masaje Técnica" loading="lazy">
                     <div class="content">
                         <div class="author">ESENCIA TERAPEUTICA</div>
                         <div class="title">MASAJE TÉCNICA</div>
@@ -131,7 +119,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/masajeEspalda (2).png" alt="Masaje Corporal Completo">
+                    <img src="image/masajeEspalda (2).png" alt="Masaje Corporal Completo" loading="lazy">
                     <div class="content">
                         <div class="author">ESENCIA TERAPEUTICA</div>
                         <div class="title">MASAJE CORPORAL</div>
@@ -147,7 +135,7 @@
                     </div>
                 </div>
             </div>
-            <!-- list thumbnail -->
+            <!-- cards -->
             <div class="thumbnail">
                 <div class="item">
                     <a href="servicios.html">
@@ -187,7 +175,7 @@
                 </div>
             </div>
 
-            <!-- next prev -->
+            <!-- flechas -->
             <div class="arrows">
                 <button id="prev" class="arrow">
                     <img src="image/arrow-left-circle-svgrepo-com.png" alt="Previous">
@@ -196,14 +184,7 @@
                     <img src="image/arrow-right-circle-svgrepo-com.png" alt="Next">
                 </button>
             </div>
-
-            <!-- time running -->
-            <!-- <div class="time"></div> -->
         </div>
-
-        <script src="javascript/carruselAvanzado.js"></script>
-
     </main>
 </body>
-
 </html>

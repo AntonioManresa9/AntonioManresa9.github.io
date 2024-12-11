@@ -4,55 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios - Esencia Terapéutica</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/RedesSociales.css"/>
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
     <link rel="stylesheet" href="css/texto.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="css/map.css">
 </head>
 <body>
 
-    <!-- Menú de navegación principal -->
-    <nav>
-        <ul class="menu">
-            <li class="logoservicios">Esencia Terapéutica</li>
-            <li><a href="index.html">Inicio</a></li>
-        </ul>
+
+ <!-- Menú de navegación -->
+ <div class="wrapper">
+    <nav class="contenedor">
+        <a href="index.html" class="logo">ESENCIA TERAPÉUTICA</a>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown-services">
+                    <a href="#services">Servicios</a>
+                    <div class="dropdown-content">
+                        <a href="servicios.html">Kobido</a>
+                            <a href="servicios.html">Shiatsu</a>
+                            <a href="servicios.html">Corporal Completo</a>
+                            <a href="servicios.html">Corporal Específico</a>
+                            <a href="servicios.html">Reflexología Podal</a>
+                    </div>
+                </li>
+                <li><a href="map.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="login-button">
+            <a href="login.html">
+                <img src="image/Cuenta blanco.png" alt="Logo" class="logo2" />
+            </a>
+        </div>
     </nav>
+</div>
 
     <!-- Sección imágenes cuadradas de servicios -->
     <div id="servicios" class="services-container">
         <div class="service" onclick="showDescription('service1')">
             <img src="image/masajeEspalda (2).png" alt="Servicio 1">
-            <h3>Servicio 1</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, m natus unde. Ut, exercitationem eum aperiam illo illum laudantium?</p>
+            <h3>Masaje Corporal Específico</h3>
+            <p>El masaje relajante corporal específico se enfoca en áreas concretas del cuerpo, como
+                cuello, espalda o piernas, utilizando técnicas suaves para aliviar tensiones localizadas,
+                reducir dolores musculares y fomentar una sensación general de relajación y bienestar.</p>
         </div>
         <div class="service" onclick="showDescription('service2')">
             <img src="image/MasajeCara.jpeg" alt="Servicio 2">
-            <h3>Servicio 2</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, m natus unde. Ut, exercitationem eum aperiam illo illum laudantium?</p>
+            <h3>Masaje Facial Kobido</h3>
+            <p>El masaje Kobido es una técnica ancestral japonesa que combina movimientos suaves y precisos
+                para estimular la circulación,
+                relajar los músculos faciales y promover un efecto rejuvenecedor natural en la piel.</p>
         </div>
         <div class="service" onclick="showDescription('service3')">
             <img src="image/Masaje Cara2.jpeg" alt="Servicio 3">
-            <h3>Servicio 3</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, m natus unde. Ut, exercitationem eum aperiam illo illum laudantium?</p>
+            <h3>Masaje Técnica Shiatsu</h3>
+            <p>El masaje facial Shiatzu es una técnica japonesa que aplica presión sobre puntos específicos
+                del rostro, utilizando los dedos y las palmas,
+                para equilibrar la energía, aliviar tensiones y mejorar la circulación, promoviendo una piel
+                más fresca y relajada.</p>
         </div>
     </div>
 
     <div class="services-container">
         <div class="service" onclick="showDescription('service4')">
             <img src="image/masajeespalda.png" alt="Servicio 4">
-            <h3>Servicio 4</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, m natus unde. Ut, exercitationem eum aperiam illo illum laudantium?</p>
+            <h3>Masaje Cuerpo Completo</h3>
+            <p>El masaje relajante corporal es una técnica que utiliza movimientos lentos y suaves en todo
+                el cuerpo para liberar tensiones,
+                reducir el estrés y promover una profunda sensación de bienestar físico y mental.</p>
         </div>
         <div class="service" onclick="showDescription('service5')">
             <img src="image/masajePies.jpeg" alt="Servicio 5">
-            <h3>Servicio 5</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, m natus unde. Ut, exercitationem eum aperiam illo illum laudantium?</p>
+            <h3>Reflexología Podal</h3>
+            <p>El masaje relajante corporal específico se enfoca en áreas concretas del cuerpo, como
+                cuello, espalda o piernas, utilizando técnicas suaves para aliviar tensiones localizadas,
+                reducir dolores musculares y fomentar una sensación general de relajación y bienestar.</p>
         </div>
         <div class="service" onclick="showDescription('service6')">
             <img src="image/FondooscuroMasajeCabeza.png" alt="Servicio 6">
-            <h3>Servicio 6</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, m natus unde. Ut, exercitationem eum aperiam illo illum laudantium?</p>
+            <h3>Masaje Desestructurante</h3>
+            <p>El masaje desestructurante es una técnica ancestral japonesa que combina movimientos suaves y precisos
+                para estimular la circulación,
+                relajar los músculos faciales y promover un efecto rejuvenecedor natural en la piel.</p>
         </div>
     </div>
 
@@ -87,7 +120,7 @@
     <!-- Pie de página -->
     <footer>
         <p>&copy; 2024 Esencia Terapéutica. Todos los derechos reservados.</p>
-        <p><a href="#contacto">Contacto</a> | <a href="#">Política de Privacidad</a></p>
+        <p><a href="map.html">Contacto</a> | <a href="https://www.aepd.es/politica-de-privacidad-y-aviso-legal">Política de Privacidad</a></p>
     </footer>
 
 </body>

@@ -70,8 +70,8 @@
 }
 
 .button-inicio {
-  background-color: #f8c8e6; /* Color de fondo claro */
-  color: #383838; /* Color del texto oscuro */
+  background-color: #fde8d091; /* Color de fondo claro */
+  color: #000000; /* Color del texto oscuro */
   padding: 15px 30px; /* Espaciado interno */
   text-align: center; /* Centrar texto */
   text-decoration: none; /* Sin subrayado */
@@ -79,14 +79,14 @@
   font-size: 18px; /* Tamaño de fuente */
   margin: 10px; /* Espaciado externo */
   cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  border: 2px solid #ffcbf8; /* Borde de color oscuro */
+  border: 2px solid #111111; /* Borde de color oscuro */
   border-radius: 25px; /* Bordes más redondeados */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
   transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
 }
 
 .button-inicio:hover {
-  background-color: #fad1ff; /* Color más oscuro al pasar el mouse */
+  background-color: #f8f8f8c5; /* Color más oscuro al pasar el mouse */
   transform: translateY(-2px); /* Efecto de levantamiento al pasar el mouse */
 }
 
@@ -198,7 +198,7 @@ form.sign-in-form {
   font-size: 1.1rem;
   color: #333;
   width: 80%;
-  padding: 20px 10px; /* Aumenta el padding para mover el texto */
+  padding: 20px 36px; /* Aumenta el padding para mover el texto */
 }
 
 
@@ -283,7 +283,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #efd1f0;
+  background-color: #fca90fd0;
 }
 .panels-container {
   position: absolute;
@@ -301,10 +301,10 @@ form.sign-in-form {
   position: fixed;
   height: 100vh; /* Altura completa de la ventana */
   width: 100vw; /* Ancho completo de la ventana */
-  top: 10%;
-  right: 48%;
+  top: 50%;
+  right: 45%;
   transform: translateY(-50%);
-  background-image: url("../image/FondoRosa.jpg");
+  background-image: url("https://img.freepik.com/fotos-premium/fondo-amarillo-fondo-amarillo-que-dice-palabra-el_994023-508641.jpg");
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -341,7 +341,7 @@ form.sign-in-form {
   transition-delay: 0.6s;
   padding: 50px; /* Espaciado interno */
   z-index: 1000;
-  padding-top: 0%;
+  padding-top: 20%;
 }
 
 .panel h3 {
@@ -349,31 +349,31 @@ form.sign-in-form {
   line-height: 1.2; /* Mayor espaciado entre líneas */
   font-size: 1.75rem; /* Tamaño de fuente mayor */
   margin-bottom: 10px; /* Espacio debajo del encabezado */
-  color: #3e3e3e; /* Color más oscuro para encabezados */
+  color: #000000; /* Color más oscuro para encabezados */
 }
 
 .panel p {
   font-size: 1rem; /* Tamaño de texto más legible */
   padding: 0.5rem 0; /* Espaciado vertical */
-  color: #555; /* Color de texto más claro */
+  color: #000000; /* Color de texto más claro */
   letter-spacing: 3.5px; /* Ajusta este valor para estrechar más o menos */
 }
 
 .btn.transparent {
-  background-color: #f8c8e6; /* Color de fondo claro */
+  background-color: #ffffff; /* Color de fondo claro */
   margin: 10px 0; /* Espaciado superior e inferior */
   background: none;
-  border: 2px solid #ffcbf8; /* Borde de color oscuro */
+  border: 2px solid #000000; /* Borde de color oscuro */
   width: 130px;
   height: 41px;
   font-weight: 600;
   font-size: 0.9rem; /* Tamaño de fuente ligeramente mayor */
-  color: #3e3e3e; /* Color del texto del botón */
+  color: #000000; /* Color del texto del botón */
   border-radius: 5px; /* Bordes redondeados */
 }
 
 .btn.transparent:hover {
-  background-color: #fad1ff; /* Color más oscuro al pasar el mouse */
+  background-color: #ffffff8e; /* Color más oscuro al pasar el mouse */
   transform: translateY(-2px); /* Efecto de levantamiento al pasar el mouse */
 }
 

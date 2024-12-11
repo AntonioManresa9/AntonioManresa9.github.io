@@ -59,6 +59,7 @@ nav .menu ul li a:hover {
 
 nav .menu {
   flex-grow: 0; /* Hace que el menú ocupe el espacio disponible */
+  margin-left: 0%;
 }
 
 nav ul {

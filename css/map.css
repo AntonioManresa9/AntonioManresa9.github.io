@@ -3,20 +3,19 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffc3925d;
+    background-color: #ff9b498a;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */ 
 }
-
 /* Contenedor principal */
 .container {
     flex-grow: 1; /* Permite que el contenido crezca para llenar el espacio */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    display: block; /* Cambiamos display a block para evitar que el mapa se vea afectado por el flexbox */
 }
-
 /* Título */
 header h1 {
     text-align: center;
@@ -24,7 +23,6 @@ header h1 {
     color: #333;
     margin-bottom: 20px;
 }
-
 /* Mapa */
 #map {
     height: 500px;
@@ -33,6 +31,8 @@ header h1 {
     border-radius: 10px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
+
+
 
 /* Redes Sociales */
 .iconRedes {
@@ -68,28 +68,6 @@ header h1 {
 .iconRedes .button span {
     font-size: 1.1em;
     color: #333;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-size: 0.9em;
-    border-top: 2px solid #444;
-    width: 100%;
-}
-
-/* Estilos para los enlaces del footer */
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
 
 /* Barra de navegación */
@@ -207,6 +185,134 @@ nav .logo:hover {
 .login-button .logo2 {
     width: 50px;
     height: 50px;
+}
+
+/*FORMULARIO DE CONTACTO*/
+/* Estilo del contenedor del formulario */
+
+/* Contenedor para centrar el formulario */
+.center-form {
+    display: flex;
+    justify-content: center; /* Centra el formulario horizontalmente */
+    align-items: center; /* Centra el formulario verticalmente */
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+
+#contact-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px; /* Puedes ajustar este valor si deseas más espacio */
+    margin-left: auto; /* Alineación automática de los márgenes a la izquierda */
+    margin-right: auto; /* Alineación automática de los márgenes a la derecha */
+}
+
+/* Título del formulario */
+#contact-form h2 {
+    font-size: 24px;
+    color: #f28e1c; /* Naranja suave */
+    margin-bottom: 20px;
+}
+
+/* Estilo de los campos del formulario */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f28e1c; /* Naranja suave */
+    outline: none;
+}
+
+/* Estilo del botón de envío */
+button {
+    background-color: #f28e1c; /* Naranja suave */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d97712; /* Naranja más oscuro */
+}
+
+/* Estilo de los iconos de redes sociales */
+.iconRedes {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.iconRedes .button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.iconRedes .button:hover {
+    transform: scale(1.1);
+    border-color: #f28e1c;
+}
+
+.iconRedes .icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.iconRedes span {
+    font-size: 14px;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: rgba(241, 104, 58, 0.63);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000000;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 
