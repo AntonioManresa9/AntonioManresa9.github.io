@@ -7,17 +7,21 @@ function checkCookies() {
   // Verificamos si el usuario ya aceptó las cookies
   if (!localStorage.getItem("cookiesAccepted")) {
       // Mostrar el aviso y la capa de fondo
-      cookieDialog.style.display = 'block';  
+      cookieDialog.classList.add('show');
       overlay.style.display = 'block';  // Mostrar la capa de fondo
-      setTimeout(() => cookieDialog.style.opacity = 1, 10); // Animación de opacidad
   }
 
   acceptButton.addEventListener("click", () => {
       localStorage.setItem("cookiesAccepted", "true");
-      // Cerrar el aviso y la capa de fondo con animación
-      cookieDialog.style.opacity = 0; 
+
+      // Animación de desvanecimiento para cerrar el cuadro de cookies
+      cookieDialog.classList.remove('show'); // Remover la clase que muestra el cuadro
       overlay.style.display = 'none';  // Ocultar la capa de fondo
-      setTimeout(() => cookieDialog.style.display = 'none', 300); // Después de 0.3s, ocultar el cuadro de cookies
+
+      // Después de 0.3s (duración de la animación), ocultamos el cuadro de cookies completamente
+      setTimeout(() => {
+          cookieDialog.style.display = 'none'; // Finalmente ocultar el cuadro
+      }, 300);  // Duración de la animación
   });
 }
 

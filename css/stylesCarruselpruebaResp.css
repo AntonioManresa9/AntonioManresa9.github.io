@@ -32,10 +32,10 @@ header a {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); /* Fondo translúcido */
     display: none; /* Ocultar por defecto */
-    z-index: 9998; /* Queda detrás del cuadro de cookies */
+    z-index: 9998; /* Fondo */
 }
 
-/* COOKIES */
+/* Cuadro de cookies */
 .cookie-dialog {
     padding: 30px;
     border-radius: 12px;
@@ -47,11 +47,11 @@ header a {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centrar vertical y horizontalmente */
-    z-index: 9999;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Asegura que el cuadro de cookies esté por encima del overlay */
     font-family: 'Arial', sans-serif;
-    display: none;
-    opacity: 0;
+    display: none; /* Asegura que no sea visible hasta que se active */
+    opacity: 0; /* Inicialmente oculto */
     transition: opacity 0.3s ease;
 }
 
@@ -107,6 +107,30 @@ header a {
 .cookie-dialog {
     animation: fadeIn 0.3s ease;
 }
+
+/* Animación para ocultar el cuadro de cookies */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(20px);
+    }
+}
+
+/* Aplicamos la animación al cuadro de cookies */
+.cookie-dialog.show {
+    display: block;
+    opacity: 1; /* Visible con opacidad */
+    animation: fadeIn 0.3s ease;
+}
+
+.cookie-dialog.hide {
+    animation: fadeOut 0.3s ease;
+}
+
 
 /* Animación para el cuadro de cookies */
 @keyframes fadeIn {
