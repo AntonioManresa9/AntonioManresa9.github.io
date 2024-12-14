@@ -64,8 +64,16 @@ registroForm.addEventListener('submit', async (event) => {
         console.log("Datos del usuario guardados en Firestore");
         alert("¡Registro exitoso!");
 
-        // Redirigir al inicio de sesión o página principal
-        //window.location.href = "index.html"; // Redirige tras el registro
+        // Cerrar sesión automáticamente para evitar el login
+        await auth.signOut(); // Esperamos que el signOut se complete correctamente
+
+        // Espera a que el estado de autenticación cambie antes de redirigir
+        onAuthStateChanged(auth, (user) => {
+            if (!user) {  // Si no hay usuario autenticado
+                console.log("El usuario se ha deslogueado correctamente.");
+                window.location.href = "login.html"; // Redirigir a la página de login
+            }
+        });
 
     } catch (error) {
         console.error("Error al registrar usuario o guardar en Firestore:", error);

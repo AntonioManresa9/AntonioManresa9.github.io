@@ -32,6 +32,12 @@ header h1 {
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
+#defaultCanvas0 {
+    display: flex; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 
 /* Redes Sociales */
@@ -212,9 +218,12 @@ nav .logo:hover {
 
 /* Título del formulario */
 #contact-form h2 {
+    display: flex;
     font-size: 24px;
     color: #f28e1c; /* Naranja suave */
     margin-bottom: 20px;
+    justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
 }
 
 /* Estilo de los campos del formulario */
@@ -298,7 +307,7 @@ button:hover {
 
 /* Estilo del pie de página */
 footer {
-    background-color: rgba(241, 104, 58, 0.63);
+    background-color: rgba(0, 0, 0, 0.726);
     padding: 20px;
     text-align: center;
     width: 100%;
@@ -308,7 +317,11 @@ footer {
 
 footer a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
+}
+footer p {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 footer a:hover {

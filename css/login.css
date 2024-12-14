@@ -142,7 +142,7 @@ form.sign-in-form {
   font-size: 1.1rem;
   color: #333;
   width: 100%;
-  padding-top: 30px; /* Agrega un espacio superior para bajar el texto */
+  padding-top: 15px; /* Agrega un espacio superior para bajar el texto */
 }
 
 /* Estilo para la estructura de los campos de entrada */
@@ -195,12 +195,12 @@ form.sign-in-form {
   background: none;
   outline: none;
   border: none;
-  line-height: 3;
+  /* line-height: 3; */
   font-weight: 400;
   font-size: 1.1rem;
   color: #333;
   width: 80%;
-  padding: 20px 36px; /* Aumenta el padding para mover el texto */
+  padding: 0px 36px; /* Aumenta el padding para mover el texto */
 }
 
 
@@ -285,7 +285,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #fca90fd0;
+  background-color: #ffa6008c;
 }
 .panels-container {
   position: absolute;
@@ -302,12 +302,11 @@ form.sign-in-form {
   content: "";
   position: fixed;
   height: 90vh; /* Altura completa de la ventana */
-  width: 50vw; /* Ancho completo de la ventana */
-  top: 30%;
- 
-  left: 0%;
+  width: 60vw; /* Ancho completo de la ventana */
+  top: 33%;
+  left: -10%;
   transform: translateY(-50%);
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallpapers.org.es%2Fwp-content%2Fuploads%2F2013%2F05%2Ffondo-de-pantalla-naranja.jpg&f=1&nofb=1&ipt=34f66c01e0ae4492e8d15f3cb88783b73658b1fffbefca0cc1c235b7c402fbd0&ipo=images");
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F005%2F007%2F271%2Fnon_2x%2Fsoft-and-smooth-orange-gradient-background-free-vector.jpg&f=1&nofb=1&ipt=f8a5a835813f069e6b8b0b666f6a876f8c5ca84e2999faf011986f5ae35e81fa&ipo=images");
   transition: 0.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -332,22 +331,22 @@ form.sign-in-form {
 
 .left-panel {
   pointer-events: all;
-  padding: 7rem 15% 25rem 4%;
+  padding: 7rem 15% 30rem 4%;
 }
 
 .right-panel {
   pointer-events: none;
-  padding: 7rem 15% 27rem 16%;
+  padding: 7rem 15% 30rem 15%;
 }
 
 .panel .content {
   color: #2c2c2c; /* Color de texto más suave */
   transition: transform 0.9s ease-in-out;
   transition-delay: 0.2s;
-  padding: 50px; /* Espaciado interno */
+  padding: 100px; /* Espaciado interno */
   z-index: 1000;
   padding-top: 0%;
-  transform: translateX(70px); /* Desplaza 50px hacia la derecha */
+  transform: translateX(30px); /* Desplaza 50px hacia la derecha */
 }
 
 .panel h3 {
@@ -359,10 +358,10 @@ form.sign-in-form {
 }
 
 .panel p {
-  font-size: 1rem; /* Tamaño de texto más legible */
+  font-size: 1.1rem; /* Tamaño de texto más legible */
   padding: 0.5rem 0; /* Espaciado vertical */
   color: #000000; /* Color de texto más claro */
-  letter-spacing: 3.5px; /* Ajusta este valor para estrechar más o menos */
+  letter-spacing: 3.3px; /* Ajusta este valor para estrechar más o menos */
 }
 
 .btn.transparent {

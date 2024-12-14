@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+    <h1><title>Página Principal</title></h1>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,15 +24,15 @@
 <body>
 
 <!-- Aviso de Cookies -->
-<div id="cookieDialog" class="cookie-dialog">
+<aside id="cookieDialog" class="cookie-dialog" role="alert">
     <div class="cookie-content">
         <div class="cookie-icon">
-            <img src="https://img.icons8.com/ios-filled/50/000000/cookie.png" alt="cookie" />
+            <img src="https://img.icons8.com/ios-filled/50/000000/cookie.png" alt="Icono de cookie" />
         </div>
         <p class="cookie-message">Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta su uso.</p>
         <button id="acceptCookies" class="cookie-btn">Aceptar</button>
     </div>
-</div>
+</aside>
 <!-- Menú -->
     <div class="wrapper">
         <nav class="contenedor">
@@ -41,7 +42,7 @@
             <div class="menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <div class="dropdown-services">
+                    <div class="dropdown-services" aria-haspopup="true" aria-expanded="false">
                         <a href="#services">Servicios</a>
                         <div class="dropdown-content">
                             <a href="servicios.html">Kobido</a>
@@ -67,7 +68,7 @@
         <!-- carousel -->
         <div id="inicio" class="carousel">
             <div class="list">
-                <div class="item">
+                <article class="item">
                     <img src="image/masajeespalda.png" alt="Masaje Corporal" loading="lazy">
                     <div class="content">
                         <div class="author">ESENCIA TERAPEUTICA</div>
@@ -82,9 +83,9 @@
                             <button><a href="servicios.html">VER MÁS</a></button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="item">
+                <article class="item">
                     <img src="image/MasajeCara.jpeg" alt="Masaje Facial" loading="lazy">
                     <div class="content">
                         <div class="author">ESENCIA TERAPEUTICA</div>
@@ -99,8 +100,8 @@
                             <button><a href="servicios.html">VER MÁS</a></button>
                         </div>
                     </div>
-                </div>
-                <div class="item">
+                </article>
+                <article class="item">
                     <img src="image/shiatsu.jpg" alt="Masaje Técnica" loading="lazy">
                     <div class="content">
                         <div class="author">ESENCIA TERAPEUTICA</div>
@@ -116,8 +117,8 @@
                             <button><a href="servicios.html">VER MÁS</a></button>
                         </div>
                     </div>
-                </div>
-                <div class="item">
+                </article>
+                <article class="item">
                     <img src="image/masajeEspalda (2).png" alt="Masaje Corporal Completo" loading="lazy">
                     <div class="content">
                         <div class="author">ESENCIA TERAPEUTICA</div>
@@ -132,11 +133,11 @@
                             <button><a href="servicios.html">VER MÁS</a></button>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
             <!-- cards -->
             <div class="thumbnail">
-                <div class="item">
+                <article class="item">
                     <a href="servicios.html">
                         <img src="image/masajeespalda.png" alt="Masaje Corporal Thumbnail">
                         <div class="content">
@@ -144,8 +145,8 @@
                             <div class="description">Específico</div>
                         </div>
                     </a>
-                </div>
-                <div class="item">
+                </article>
+                <article class="item">
                     <a href="servicios.html">
                         <img src="image/MasajeCara.jpeg" alt="Masaje Facial Thumbnail">
                         <div class="content">
@@ -153,8 +154,8 @@
                             <div class="description">Kobido</div>
                         </div>
                     </a>
-                </div>
-                <div class="item">
+                </article>
+                <article class="item">
                     <a href="servicios.html">
                         <img src="image/shiatsu.jpg" alt="Masaje Técnica Thumbnail">
                         <div class="content">
@@ -162,8 +163,8 @@
                             <div class="description">Shiatsu</div>
                         </div>
                     </a>
-                </div>
-                <div class="item">
+                </article>
+                <article class="item">
                     <a href="servicios.html">
                         <img src="image/masajeEspalda (2).png" alt="Masaje Corporal Completo Thumbnail">
                         <div class="content">
@@ -171,15 +172,15 @@
                             <div class="description">Cuerpo Completo</div>
                         </div>
                     </a>
-                </div>
+                </article>
             </div>
 
             <!-- flechas -->
             <div class="arrows">
-                <button id="prev" class="arrow">
+                <button id="prev" class="arrow" aria-label="Anterior">
                     <img src="image/arrow-left-circle-svgrepo-com.png" alt="Previous">
                 </button>
-                <button id="next" class="arrow">
+                <button id="next" class="arrow" aria-label="Siguiente">
                     <img src="image/arrow-right-circle-svgrepo-com.png" alt="Next">
                 </button>
             </div>
