@@ -105,7 +105,7 @@ loginForm.addEventListener('submit', async (event) => {
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
 
-        console.log("Usuario logueado:", user);
+        alert("Sesión iniciada correctamente.", user);
 
         // Redirigir a la página principal o dashboard
         window.location.href = "index.html"; // Redirige al index.html al iniciar sesión
@@ -128,7 +128,7 @@ loginForm.addEventListener('submit', async (event) => {
 // Detecta el estado de autenticación
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        alert("Sesión iniciada correctamente.", user);
+        console.log("Sesión iniciada correctamente.", user);
         // Mostrar contenido para el usuario autenticado o redirigir a una página protegida
     } else {
         console.log("No hay usuario autenticado");
