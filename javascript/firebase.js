@@ -128,7 +128,7 @@ loginForm.addEventListener('submit', async (event) => {
 // Detecta el estado de autenticación
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        console.log("Usuario autenticado:", user);
+        alert("Sesión iniciada correctamente.", user);
         // Mostrar contenido para el usuario autenticado o redirigir a una página protegida
     } else {
         console.log("No hay usuario autenticado");

@@ -6,6 +6,15 @@ a {
     /* Para heredar el color del padre */
 }
 
+#welcome-message {
+    display: none; /* Ocultamos el mensaje por defecto */
+    color: rgb(0, 0, 0);
+    font-size: 23px;
+    padding: 12px;
+    background-color: #ffffff;
+    border-radius: 37px;
+}
+
 header {
     width: 100%;
     max-width: 80%;
