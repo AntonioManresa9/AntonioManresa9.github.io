@@ -110,6 +110,16 @@ nav .logo {
     top: 15px; /* Sube el texto hacia arriba */
 }
 
+
+.chart-container {
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    padding: 20px;
+    color:#333
+}
+
+
 .menu {
     display: flex;
     padding: 10px;
